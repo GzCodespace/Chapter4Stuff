@@ -37,17 +37,20 @@ int main()
         cin.ignore(300, '\n');
     }
     cout<<time1<<time2<<time3;
-    if (time1 < time2 && time1 < time3){
-        if (time2 < time3){
-            cout << "\n" << name1 << "was first.";
-            cout << "\n" << name2 << "was second.";
-            cout << "\n" << name3 << "was last.";
-        }if (time2 > time3){
-            cout << "\n" << name1 << "was first.";
-            cout << "\n" << name2 << "was second.";
-            cout << "\n" << name3 << "was last.";
-        }
+    if (time1 < time2 && time2 < time3){
+            cout << "\n" << name1 << " was first.";
+            cout << "\n" << name2 << " was second.";
+            cout << "\n" << name3 << " was last.";
+    } 
+    if (time1 < time2 && time2 > time3){
+            cout << "\n" << name1 << " was first.";
+            cout << "\n" << name3 << " was second.";
+            cout << "\n" << name2 << " was last.";
+    } 
+    if (time1 > time2 && time2 > time3){
+            cout << "\n" << name3 << " was first.";
+            cout << "\n" << name2 << " was second.";
+            cout << "\n" << name1 << " was last.";
     }
-    
     
 }
