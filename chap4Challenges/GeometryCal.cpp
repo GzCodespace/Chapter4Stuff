@@ -4,9 +4,10 @@ using namespace std;
 int main()
 {
     int option;
+    double length;
     cout << "\n1. Area of a circle";
-    cout << "\n2. Area of a circle";
-    cout << "\n3. Area of a circle";
+    cout << "\n2. Area of a rectangle";
+    cout << "\n3. Area of a triangle";
     cout << "\n4. Quit";
     cout << "\nOption: ";
 
@@ -19,10 +20,17 @@ int main()
     switch (option)
     {
     case 1:
-        cout << "You got 0 points!";
+        double radius;
+        cout << "Radius: ";
+        while (!(cin >> radius))
+        {
+            cout << "Try again. Radius: ";
+            cin.clear();
+            cin.ignore(100, '\n');
+        }
+        cout << "The area is " << (3.14159) * (radius * radius);
         break;
     case 2:
-        double length;
         double width;
         cout << "Length: ";
         while (!(cin >> length))
@@ -38,13 +46,28 @@ int main()
             cin.clear();
             cin.ignore(100, '\n');
         }
-        cout << "The area is "
+        cout << "The area is " << width * length;
         break;
     case 3:
-        cout << "You got 15 points!";
+        double height;
+        cout << "Length: ";
+        while (!(cin >> length))
+        {
+            cout << "Try again. Length: ";
+            cin.clear();
+            cin.ignore(100, '\n');
+        }
+        cout << "Height: ";
+        while (!(cin >> height))
+        {
+            cout << "Try again. Height: ";
+            cin.clear();
+            cin.ignore(100, '\n');
+        }
+        cout << "The area is " << (length * height)/2;
         break;
     case 4:
-        cout << "You got 30 points!";
+        cout << "Bye";
         break;
     }
 }
